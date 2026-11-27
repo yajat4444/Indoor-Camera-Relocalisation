@@ -1,0 +1,7 @@
+p22_work/
+7scenes/
+*.zip
+*.pt
+*.pth
+*.mat
+executed.ipynb
