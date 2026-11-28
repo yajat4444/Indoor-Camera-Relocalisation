@@ -31,6 +31,7 @@ UCS532 Open Challenge. Authors: Yajat Taneja (1024030082), Riddhima Agrawal (102
 | stairs  | sfm   | Oracle nearest view |         16.75 |          21.24 |              0    | none        |
 
 Density ablation, hypotheses and failure analysis: see `report.pdf` and `results/tables`.
+Kaggle notebook and results in:- https://www.kaggle.com/code/yajat4444/notebook44f876b1db
 
 ## Credits
 ACE (Brachmann et al., CVPR 2023, https://github.com/nianticlabs/ace, pinned commit, with three small patches saved in `results/`), hloc NetVLAD (https://github.com/cvg/Hierarchical-Localization), pseudo-GT poses (Brachmann et al., ICCV 2021), 7-Scenes (Shotton et al., CVPR 2013), NetVLAD (Arandjelovic et al., CVPR 2016), top-k interpolation after Sattler et al., CVPR 2019. Pose/metric/retrieval/analysis code is ours.
