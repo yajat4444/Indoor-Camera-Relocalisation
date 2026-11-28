@@ -1,0 +1,44 @@
+--- ace_trainer.py (official)
++++ ace_trainer.py (P22 patches)
+@@ -44,7 +44,7 @@
+         # torch.backends.cudnn.allow_tf32 = False
+ 
+         # Setup randomness for reproducibility.
+-        self.base_seed = 2089
++        self.base_seed = int(__import__('os').environ.get('P22_SEED', 2089))
+         set_seed(self.base_seed)
+ 
+         # Used to generate batch indices.
+@@ -111,6 +111,14 @@
+                                                        epochs=self.options.epochs,
+                                                        steps_per_epoch=steps_per_epoch,
+                                                        cycle_momentum=False)
++        # P22: count the optimiser steps that actually happen (wrapped AFTER the scheduler has installed its own step tracker)
++        self._p22_opt_steps = 0
++        _p22_orig_step = self.optimizer.step
++        def _p22_counting_step(*a, **k):
++            self._p22_opt_steps += 1
++            return _p22_orig_step(*a, **k)
++        _p22_counting_step._wrapped_by_lr_sched = True
++        self.optimizer.step = _p22_counting_step
+ 
+         # Gradient scaler in case we train with half precision.
+         self.scaler = GradScaler(enabled=self.options.use_half)
+@@ -447,7 +455,7 @@
+         loss /= batch_size
+ 
+         # We need to check if the step actually happened, since the scaler might skip optimisation steps.
+-        old_optimizer_step = self.optimizer._step_count
++        old_optimizer_step = self._p22_opt_steps
+ 
+         # Optimization steps.
+         self.optimizer.zero_grad(set_to_none=True)
+@@ -470,7 +478,7 @@
+                 self.ace_visualizer.render_mapping_frame(vis_scene_coords, vis_errors)
+ 
+         # Only step if the optimizer stepped and if we're not over-stepping the total_steps supported by the scheduler.
+-        if old_optimizer_step < self.optimizer._step_count < self.scheduler.total_steps:
++        if old_optimizer_step < self._p22_opt_steps < self.scheduler.total_steps:
+             self.scheduler.step()
+ 
+     def save_model(self):

@@ -1,0 +1,17 @@
+scene,ground truth,method,median t (cm),median R (deg),acc 5cm/5deg (%),usable range
+chess,dslam,NetVLAD top-1,24.99,12.54,0.00,none
+chess,dslam,NetVLAD top-k,20.10,9.44,0.15,none
+chess,dslam,ACE,1.91 +- 0.03,0.69,96.77 +- 0.25,censored (all bins usable)
+chess,dslam,Oracle nearest view,10.94,22.78,0.00,none
+chess,sfm,NetVLAD top-1,25.68,12.53,0.00,none
+chess,sfm,NetVLAD top-k,20.78,9.3,0.10,none
+chess,sfm,ACE,0.58 +- 0.01,0.18,100.00 +- 0.00,censored (all bins usable)
+chess,sfm,Oracle nearest view,11.30,23.33,0.00,none
+stairs,dslam,NetVLAD top-1,27.25,15.02,0.00,none
+stairs,dslam,NetVLAD top-k,25.76,14.62,0.00,none
+stairs,dslam,ACE,3.83 +- 0.09,1.1,70.40 +- 2.43,censored (all bins usable)
+stairs,dslam,Oracle nearest view,13.84,28.99,0.00,none
+stairs,sfm,NetVLAD top-1,27.82,14.99,0.00,none
+stairs,sfm,NetVLAD top-k,25.84,14.05,0.00,none
+stairs,sfm,ACE,2.79 +- 0.10,0.79,81.60 +- 2.01,censored (all bins usable)
+stairs,sfm,Oracle nearest view,16.75,21.24,0.00,none

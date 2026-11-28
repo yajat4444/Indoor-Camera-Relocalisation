@@ -1,0 +1,5 @@
+scene,gt,seeds_done,measured_acc_mean_pct,published_acc_pct (NOT measured here),difference_pp,tolerance_pp,within_tolerance
+chess,sfm,3,100.0,100.0,0.0,1.0,True
+chess,dslam,3,96.77,96.7,0.07,reported only (approximate third-party reference),
+stairs,sfm,3,81.6,81.9,-0.3,3.0,True
+stairs,dslam,3,70.4,68.9,1.5,reported only (approximate third-party reference),

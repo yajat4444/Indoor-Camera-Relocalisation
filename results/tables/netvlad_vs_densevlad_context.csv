@@ -1,0 +1,3 @@
+scene,"NetVLAD top-1 median t (cm, measured, mean of 2 GTs)","DenseVLAD top-1 median t (cm, PUBLISHED, other descriptor)",plausibility range (x/÷3),inside range
+chess,25.3,21.0,7.0-63.0,True
+stairs,27.5,25.0,8.3-75.0,True

@@ -1,0 +1,13 @@
+scene,split,sequence,frames,first_frame,last_frame
+chess,train,seq-01,1000,0,999
+chess,train,seq-02,1000,0,999
+chess,train,seq-04,1000,0,999
+chess,train,seq-06,1000,0,999
+chess,test,seq-03,1000,0,999
+chess,test,seq-05,1000,0,999
+stairs,train,seq-02,500,0,499
+stairs,train,seq-03,500,0,499
+stairs,train,seq-05,500,0,499
+stairs,train,seq-06,500,0,499
+stairs,test,seq-01,500,0,499
+stairs,test,seq-04,500,0,499

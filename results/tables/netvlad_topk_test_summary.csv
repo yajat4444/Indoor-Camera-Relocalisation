@@ -1,0 +1,5 @@
+scene,gt,method,n,median_t_cm,median_r_deg,acc_5cm_5deg_pct,share_negative_weight_pct
+chess,dslam,NetVLAD top-k (k=20),2000,20.101295659644194,9.444576003795316,0.15,99.65
+chess,sfm,NetVLAD top-k (k=20),2000,20.782775630860634,9.297750938719629,0.1,99.65
+stairs,dslam,NetVLAD top-k (k=5),1000,25.756275382016238,14.618200854931283,0.0,0.8
+stairs,sfm,NetVLAD top-k (k=12),1000,25.838555138206615,14.046754908201644,0.0,85.6

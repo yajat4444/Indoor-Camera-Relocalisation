@@ -1,0 +1,19 @@
+criterion,status,checks
+dataset downloaded/loaded (real images),PASS,"image_download=PASS, real_images_loaded_and_matched=PASS"
+both pose variants loaded and conventions verified,PASS,"pose_files_present=PASS, pose_conventions=PASS, ace_read_pose_parity=PASS, d_to_rgb_parity=PASS"
+D-SLAM variant unambiguous (calibration cross-check),PASS,dslam_calibration_crosscheck=PASS
+archive extraction policy,PASS,archive_extraction_policy=PASS
+metrics validated,PASS,"metrics_vs_scipy=PASS, usable_range_logic=PASS, control3_synthetic_pose=PASS"
+nearest-view distance validated,PASS,"distance_hand_example=PASS, distance_bruteforce_real=PASS, localiser_interface_image_only=PASS"
+"train/dev/test structures, no leakage",PASS,split_structures_no_leakage=PASS
+negative controls 1-5,PASS,"control1_mean_pose_floor=PASS, control2_shuffled_pose=PASS, control3_synthetic_pose=PASS, control4_oracle_bound=PASS, control5_pose_level=PASS, control5_loader_fixture=PASS, variant_keys_identical=PASS"
+NetVLAD features and top-1/top-k run,PASS,"netvlad_extraction=PASS, netvlad_descriptor_sanity=PASS, netvlad_topk_unit_tests=PASS, netvlad_topk_k1_equals_top1=PASS, netvlad_topk_dev_only_tuning=PASS"
+"NetVLAD checks (self-retrieval, oracle bound, context range)",PASS,"netvlad_self_retrieval=PASS, netvlad_oracle_bound=PASS, netvlad_sanity_range=PASS"
+ACE built and verified,PASS,"ace_build=PASS, ace_solver_synthetic=PASS, ace_dataset_parity=PASS"
+"ACE trained and tested, both GTs, all seeds",PASS,"ace_smoke_gate=PASS, ace_all_runs_complete=PASS"
+ACE scoring parity with its own per-frame output,PASS,ace_scoring_parity=PASS
+ACE reproduction targets checked,PASS,"ace_reproduction_sfm_chess=PASS, ace_reproduction_sfm_stairs=PASS"
+"full-density comparison, bins and usable range",PASS,"eval_no_frames_removed=PASS, eval_bins_and_oracle=PASS"
+"statistics (block length check, bootstrap)",PASS,"bootstrap_block_length_dev=PASS, statistics_bootstrap=PASS"
+training-density experiments,PASS,"density_maps_valid=PASS, density_netvlad=PASS, density_scene_folders=PASS, density_ace_scoring_parity=PASS, density_ace_all_runs_complete=PASS, density_tables_and_H3=PASS"
+figures and failure analysis,PASS,"figures_saved=PASS, failure_analysis=PASS"

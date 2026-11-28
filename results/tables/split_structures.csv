@@ -1,0 +1,5 @@
+scene,gt,train_seqs,dev_seq,test_seqs,n_train,n_dev,n_dev_map,n_test
+chess,dslam,"[np.str_('seq-01'), np.str_('seq-02'), np.str_('seq-04'), np.str_('seq-06')]",seq-06,"[np.str_('seq-03'), np.str_('seq-05')]",4000,1000,3000,2000
+chess,sfm,"[np.str_('seq-01'), np.str_('seq-02'), np.str_('seq-04'), np.str_('seq-06')]",seq-06,"[np.str_('seq-03'), np.str_('seq-05')]",4000,1000,3000,2000
+stairs,dslam,"[np.str_('seq-02'), np.str_('seq-03'), np.str_('seq-05'), np.str_('seq-06')]",seq-06,"[np.str_('seq-01'), np.str_('seq-04')]",2000,500,1500,1000
+stairs,sfm,"[np.str_('seq-02'), np.str_('seq-03'), np.str_('seq-05'), np.str_('seq-06')]",seq-06,"[np.str_('seq-01'), np.str_('seq-04')]",2000,500,1500,1000

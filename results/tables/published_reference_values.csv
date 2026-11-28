@@ -1,0 +1,4 @@
+quantity,chess,stairs,source,status
+ace_sfm_acc_5cm5deg,100.0,81.9,"ACE paper supplement (per-scene, SfM poses)","PUBLISHED, NOT MEASURED HERE"
+ace_dslam_acc_5cm5deg,96.7,68.9,"Bian et al. 2025, Table 4 (third-party run, approximate)","PUBLISHED, NOT MEASURED HERE"
+densevlad_top1_median,"(21.0, 12.5)","(25.0, 15.8)","Sattler et al. CVPR 2019, Table 2 (DenseVLAD, NOT NetVLAD)","PUBLISHED, NOT MEASURED HERE"

@@ -1,0 +1,118 @@
+{
+ "scenes": [
+  "chess",
+  "stairs"
+ ],
+ "gt_variants": [
+  "dslam",
+  "sfm"
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "thresholds": {
+  "trans_cm": 5.0,
+  "rot_deg": 5.0
+ },
+ "distance_bins": 5,
+ "usable_share": 0.5,
+ "orientation_split_deg": 30.0,
+ "bootstrap": {
+  "block_len": 50,
+  "n_boot": 2000,
+  "ci": 0.95
+ },
+ "netvlad": {
+  "model": "VGG16-NetVLAD-Pitts30K",
+  "whiten": true,
+  "dim": 4096,
+  "batch": 16,
+  "k_grid": [
+   2,
+   3,
+   5,
+   8,
+   12,
+   20
+  ],
+  "ridge": 1e-06,
+  "k_rule": "k minimising the MEDIAN TRANSLATION ERROR on the development sequence (queries) against the development map; ties -> smaller k"
+ },
+ "ace": {
+  "seeds_to_run": [
+   0,
+   1,
+   2
+  ],
+  "smoke_gate_min_acc_pct": 90.0,
+  "parity_tol_t_cm": 0.1,
+  "parity_tol_r_deg": 0.05,
+  "repro_tol_pp": {
+   "chess": 1.0,
+   "stairs": 3.0
+  },
+  "buffer_default": 8000000,
+  "buffer_fallback": 4000000
+ },
+ "netvlad_sanity_factor": 3.0,
+ "densities": {
+  "fractions": [
+   1.0,
+   0.5,
+   0.25,
+   0.1
+  ],
+  "uniform_stride_50pct": 2,
+  "random_thinning_seed": 20260101,
+  "seeds": {
+   "0.5": [
+    0,
+    1,
+    2
+   ],
+   "0.25": [
+    0
+   ],
+   "0.1": [
+    0
+   ]
+  }
+ },
+ "dev_sequence_rule": "last training sequence in sorted order (fixed before any result existed)",
+ "urls": {
+  "ms_scene_zip": "http://download.microsoft.com/download/2/8/5/28564B23-0828-408F-8631-23B1EFF1DAC8/{scene}.zip",
+  "pgt_repo": "https://github.com/tsattler/visloc_pseudo_gt_limitations.git",
+  "ace_repo": "https://github.com/nianticlabs/ace"
+ },
+ "image_size_hw": [
+  480,
+  640
+ ],
+ "rgb_focal_default": 525.0,
+ "environment": {
+  "platform": "kaggle",
+  "python": "3.13.16",
+  "os": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "cpu_count": 4,
+  "ram_gb": 31.3,
+  "gpu": {
+   "torch": "2.11.0+cu130",
+   "cuda_available": true,
+   "devices": [
+    {
+     "name": "Tesla T4",
+     "memory_gb": 14.6
+    },
+    {
+     "name": "Tesla T4",
+     "memory_gb": 14.6
+    }
+   ]
+  },
+  "numpy": "2.1.3",
+  "scipy": "1.16.3",
+  "pandas": "2.3.3"
+ }
+}

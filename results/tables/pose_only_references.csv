@@ -1,0 +1,13 @@
+scene,gt,kind,reference,n,median_t_cm,median_r_deg,acc_5cm_5deg_pct
+chess,dslam,pose-only control (no localisation method),mean-pose floor,2000,81.50474067956347,22.96024576222263,0.0
+chess,dslam,pose-only control (no localisation method),shuffled-pose control,2000,106.7063814721403,34.576941124326254,0.25
+chess,dslam,pose-only control (no localisation method),oracle nearest view,2000,10.939577262567575,22.782134331955223,0.0
+chess,sfm,pose-only control (no localisation method),mean-pose floor,2000,83.78482515719924,22.711450983512677,0.0
+chess,sfm,pose-only control (no localisation method),shuffled-pose control,2000,107.80182274199653,33.57930256182247,0.44999999999999996
+chess,sfm,pose-only control (no localisation method),oracle nearest view,2000,11.298541532999582,23.329037672158755,0.0
+stairs,dslam,pose-only control (no localisation method),mean-pose floor,1000,51.60893117590085,25.87069412836624,0.0
+stairs,dslam,pose-only control (no localisation method),shuffled-pose control,1000,72.232460055159,21.52745044035518,1.3
+stairs,dslam,pose-only control (no localisation method),oracle nearest view,1000,13.83868144140058,28.98901750575856,0.0
+stairs,sfm,pose-only control (no localisation method),mean-pose floor,1000,55.73180200229611,24.492707869863544,0.0
+stairs,sfm,pose-only control (no localisation method),shuffled-pose control,1000,78.12946070285588,21.54167887258367,1.0999999999999999
+stairs,sfm,pose-only control (no localisation method),oracle nearest view,1000,16.747259817038547,21.23515613408901,0.0

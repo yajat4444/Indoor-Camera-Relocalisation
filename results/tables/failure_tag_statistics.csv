@@ -1,0 +1,31 @@
+scene,method,tag,share_among_worst20_pct,share_among_all_test_frames_pct
+chess,NetVLAD top-1,far-from-map,25.0,10.0
+chess,NetVLAD top-1,rotated-view,55.00000000000001,30.0
+chess,NetVLAD top-1,blurry,15.0,10.0
+chess,NetVLAD top-1,low-confidence,70.0,10.0
+chess,NetVLAD top-1,untagged,0.0,55.75
+chess,NetVLAD top-k,far-from-map,65.0,10.0
+chess,NetVLAD top-k,rotated-view,90.0,30.0
+chess,NetVLAD top-k,blurry,15.0,10.0
+chess,NetVLAD top-k,low-confidence,50.0,10.0
+chess,NetVLAD top-k,untagged,0.0,55.75
+chess,ACE,far-from-map,10.0,10.0
+chess,ACE,rotated-view,30.0,30.0
+chess,ACE,blurry,55.00000000000001,10.0
+chess,ACE,low-confidence,30.0,10.0
+chess,ACE,untagged,25.0,54.75
+stairs,NetVLAD top-1,far-from-map,40.0,10.0
+stairs,NetVLAD top-1,rotated-view,15.0,26.700000000000003
+stairs,NetVLAD top-1,blurry,0.0,10.0
+stairs,NetVLAD top-1,low-confidence,15.0,10.0
+stairs,NetVLAD top-1,untagged,45.0,51.7
+stairs,NetVLAD top-k,far-from-map,15.0,10.0
+stairs,NetVLAD top-k,rotated-view,45.0,26.700000000000003
+stairs,NetVLAD top-k,blurry,0.0,10.0
+stairs,NetVLAD top-k,low-confidence,20.0,10.0
+stairs,NetVLAD top-k,untagged,55.00000000000001,51.7
+stairs,ACE,far-from-map,0.0,10.0
+stairs,ACE,rotated-view,5.0,26.700000000000003
+stairs,ACE,blurry,5.0,10.0
+stairs,ACE,low-confidence,60.0,10.0
+stairs,ACE,untagged,30.0,48.3

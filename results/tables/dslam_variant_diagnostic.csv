@@ -1,0 +1,25 @@
+scene,split,candidate,median_t_cm,median_r_deg,detail
+chess,train,To @ inv(D)  [ACE calibrated; the rule used above],0.008342983790504507,0.0008234538548507276,
+chess,train,To (uncalibrated),2.567441660672383,0.6687151538439373,
+chess,train,To @ D,5.13121066881971,1.3375012264799846,
+chess,train,inv(D) @ To,1.762994698998962,0.39168016484604684,
+chess,train,D @ To,5.2398579187738346,1.2790735924552732,
+chess,train,residual rotvec mean (deg) / std (deg),,,"mean=[0.0, 0.0, 0.0] std=[0.0, 0.001, 0.0]"
+chess,test,To @ inv(D)  [ACE calibrated; the rule used above],0.009273468265103044,0.0009333009443158318,
+chess,test,To (uncalibrated),2.5655251760375393,0.6688071383314965,
+chess,test,To @ D,5.129242140524945,1.3375933789848446,
+chess,test,inv(D) @ To,1.6837423866667678,0.36229286752899414,
+chess,test,D @ To,5.37990349164917,1.2878413816439065,
+chess,test,residual rotvec mean (deg) / std (deg),,,"mean=[0.001, 0.0, 0.0] std=[0.0, 0.001, 0.0]"
+stairs,train,To @ inv(D)  [ACE calibrated; the rule used above],0.009107960128590338,0.0009201501768932597,
+stairs,train,To (uncalibrated),2.5648616202622128,0.669349113625074,
+stairs,train,To @ D,5.1286310843907295,1.3381354560348582,
+stairs,train,inv(D) @ To,2.1135892505225864,0.25504845995571346,
+stairs,train,D @ To,5.257850611054044,1.3128959966664926,
+stairs,train,residual rotvec mean (deg) / std (deg),,,"mean=[0.0, -0.0, 0.0] std=[0.0, 0.001, 0.0]"
+stairs,test,To @ inv(D)  [ACE calibrated; the rule used above],0.00869784131740239,0.0005251831830213691,
+stairs,test,To (uncalibrated),2.56187790036051,0.6691546254253911,
+stairs,test,To @ D,5.125667987534582,1.3379409085557366,
+stairs,test,inv(D) @ To,1.8537255960408385,0.11632053757740084,
+stairs,test,D @ To,5.729430929889205,1.333106207732623,
+stairs,test,residual rotvec mean (deg) / std (deg),,,"mean=[0.0, -0.0, -0.0] std=[0.0, 0.0, 0.0]"

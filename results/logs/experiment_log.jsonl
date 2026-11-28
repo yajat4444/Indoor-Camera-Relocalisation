@@ -1,0 +1,84 @@
+{"t": "2026-11-21 19:17:36", "kind": "session_start", "platform": "kaggle", "root": "/kaggle/working/p22"}
+{"t": "2026-11-21 19:17:38", "kind": "check", "name": "pose_files_present", "status": "PASS", "detail": "2 variants x 2 scenes x 2 splits"}
+{"t": "2026-11-21 19:17:41", "kind": "image_host_probe", "reachable": true, "status": 200, "bytes": "3079608937", "url": "http://download.microsoft.com/download/2/8/5/28564B23-0828-408F-8631-23B1EFF1DAC8/chess.zip"}
+{"t": "2026-11-21 19:18:28", "kind": "check", "name": "image_download", "status": "PASS", "detail": "scenes in /kaggle/working/p22/data/7scenes_source"}
+{"t": "2026-11-21 19:19:16", "kind": "check", "name": "real_images_loaded_and_matched", "status": "PASS", "detail": "all frames matched by key, sizes 640x480, none unreadable"}
+{"t": "2026-11-21 19:19:16", "kind": "check", "name": "split_structures_no_leakage", "status": "PASS", "detail": "sequence- and frame-level disjointness asserted for 2 scenes x 2 variants; uniform thinning keeps every 2nd frame"}
+{"t": "2026-11-21 19:19:18", "kind": "check", "name": "pose_conventions", "status": "PASS", "detail": "orthonormality 1.0e-15, det 1.6e-15, inverse/centre 1.3e-15"}
+{"t": "2026-11-21 19:19:20", "kind": "check", "name": "ace_read_pose_parity", "status": "PASS", "detail": "max abs diff vs ACE read_pose_data = 1.8e-15 (ACE commit e9e90f2d)"}
+{"t": "2026-11-21 19:19:20", "kind": "check", "name": "d_to_rgb_parity", "status": "PASS", "detail": "max abs diff vs ACE setup_7scenes.py constant = 0.0e+00"}
+{"t": "2026-11-21 19:19:20", "kind": "check", "name": "metrics_vs_scipy", "status": "PASS", "detail": "max |ours - scipy| = 2.7e-11 deg over 2000 pairs; edge cases ok=True"}
+{"t": "2026-11-21 19:19:20", "kind": "check", "name": "usable_range_logic", "status": "PASS", "detail": "reached/censored/none cases handled: reached, censored, none"}
+{"t": "2026-11-21 19:19:22", "kind": "check", "name": "dslam_calibration_crosscheck", "status": "PASS", "detail": "calibrated original poses agree with pgt/dslam (< 1 cm, < 0.5 deg)"}
+{"t": "2026-11-21 19:19:24", "kind": "check", "name": "localiser_interface_image_only", "status": "PASS", "detail": "Localiser.localise(self, image) is the only entry point; distance code lives in OFFLINE_EVAL_FUNCTIONS"}
+{"t": "2026-11-21 19:19:24", "kind": "check", "name": "distance_hand_example", "status": "PASS", "detail": "d_cm=[40.0, 50.0], nn=[0, 1], orient=[10.0, 40.0]"}
+{"t": "2026-11-21 19:19:24", "kind": "check", "name": "distance_bruteforce_real", "status": "PASS", "detail": "KD-tree vs brute force on real poses: max abs diff 0.0e+00 cm"}
+{"t": "2026-11-21 19:19:24", "kind": "check", "name": "control3_synthetic_pose", "status": "PASS", "detail": "200 random poses: max deviation from (3 cm, 2 deg) = 2.1e-12"}
+{"t": "2026-11-21 19:19:24", "kind": "check", "name": "variant_keys_identical", "status": "PASS", "detail": "both ground truths cover exactly the same frames"}
+{"t": "2026-11-21 19:19:24", "kind": "check", "name": "control5_pose_level", "status": "PASS", "detail": "sequence/frame disjointness, contiguous indices, valid rotations, identical frame sets"}
+{"t": "2026-11-21 19:19:25", "kind": "check", "name": "control5_loader_fixture", "status": "PASS", "detail": "SYNTHETIC FIXTURE: restructuring round-trips both variants; missing image, corrupt image, swapped poses and train/test leakage are each detected"}
+{"t": "2026-11-21 19:19:25", "kind": "check", "name": "archive_extraction_policy", "status": "PASS", "detail": "SYNTHETIC: bad CRC on Thumbs.db is skipped and logged; bad CRC on an image/pose file aborts extraction"}
+{"t": "2026-11-21 19:19:25", "kind": "check", "name": "control1_mean_pose_floor", "status": "PASS", "detail": "floor median translation error > 2x oracle in every scene/variant (pose-only)"}
+{"t": "2026-11-21 19:19:25", "kind": "check", "name": "control2_shuffled_pose", "status": "PASS", "detail": "perfect=0, order-invariant scoring, shuffled translation error >= floor, shuffled rotation error > 0 (pose-only)"}
+{"t": "2026-11-21 19:19:25", "kind": "check", "name": "control4_oracle_bound", "status": "PASS", "detail": "oracle translation error == d(q); no training pose closer; random picks never beat it (pose-only)"}
+{"t": "2026-11-21 19:27:10", "kind": "check", "name": "netvlad_descriptor_sanity", "status": "PASS", "detail": "dim=4096, max |norm-1|=1.2e-07; batch-vs-single 2.8e-06, repeat 0.0e+00, cache-vs-fresh 1.7e-06"}
+{"t": "2026-11-21 19:27:10", "kind": "check", "name": "netvlad_extraction", "status": "PASS", "detail": "9000 descriptors, official hloc VGG16-NetVLAD-Pitts30K + whitening"}
+{"t": "2026-11-21 19:27:11", "kind": "check", "name": "netvlad_self_retrieval", "status": "PASS", "detail": "self top-1 hit rate (worst scene/variant) 99.85 %, min self-similarity 1.000000, worst self-retrieval translation error 0.66 cm (any non-self hit must be an exact duplicate image, hence a near-identical pose)"}
+{"t": "2026-11-21 19:27:16", "kind": "check", "name": "netvlad_oracle_bound", "status": "PASS", "detail": "no top-1 translation error is below the nearest-view distance d(q), for every query, scene and variant"}
+{"t": "2026-11-21 19:27:16", "kind": "check", "name": "netvlad_sanity_range", "status": "PASS", "detail": "measured NetVLAD top-1 median translation error lies within a factor 3 of the published DenseVLAD median (context only; different descriptor)"}
+{"t": "2026-11-21 19:27:16", "kind": "check", "name": "netvlad_topk_unit_tests", "status": "PASS", "detail": "weight recovery 1.1e-16; vs SLSQP 1.4e-07; sum-1 0.0e+00; quat mean identical 2.6e-14 deg, midpoint vs slerp 2.4e-14 deg, sign flip 0.0e+00 deg; k=1 3.9e-16; negative-weight pose valid=True"}
+{"t": "2026-11-21 19:27:17", "kind": "check", "name": "netvlad_topk_k1_equals_top1", "status": "PASS", "detail": "k = 1 interpolation reproduces top-1 retrieval on real descriptors"}
+{"t": "2026-11-21 19:27:29", "kind": "netvlad_k_star", "K_STAR": {"chess/dslam": 20, "chess/sfm": 20, "stairs/dslam": 5, "stairs/sfm": 12}}
+{"t": "2026-11-21 19:27:39", "kind": "check", "name": "netvlad_topk_dev_only_tuning", "status": "PASS", "detail": "k chosen on the development sequence only: {'chess/dslam': 20, 'chess/sfm': 20, 'stairs/dslam': 5, 'stairs/sfm': 12}"}
+{"t": "2026-11-21 19:29:26", "kind": "check", "name": "ace_build", "status": "PASS", "detail": "official ACE at e9e90f2d; dsacstar built; encoder sha256 c69ca934d820"}
+{"t": "2026-11-21 19:29:29", "kind": "check", "name": "ace_solver_synthetic", "status": "PASS", "detail": "official dsacstar RANSAC on synthetic scene coordinates: noise-free error 1.5e-06 cm; 2 cm coordinate noise -> 0.84 cm / 0.27 deg"}
+{"t": "2026-11-21 19:30:07", "kind": "check", "name": "ace_dataset_parity", "status": "PASS", "detail": "ACE CamLocDataset returns the pose-repository poses (max centre difference 0.018 cm) and the stored focal length (max diff 2.9e-05); frame counts match=True"}
+{"t": "2026-11-21 19:37:47", "kind": "ace_train_done", "scene": "chess", "variant": "sfm", "seed": 0, "density_tag": "full", "train_seconds": 459.2, "buffer": 8000000}
+{"t": "2026-11-21 19:39:41", "kind": "check", "name": "ace_smoke_gate", "status": "PASS", "detail": "chess/SfM/seed0 accuracy 100.0 % (gate 90 %)"}
+{"t": "2026-11-21 19:47:18", "kind": "ace_train_done", "scene": "chess", "variant": "sfm", "seed": 1, "density_tag": "full", "train_seconds": 456.4, "buffer": 8000000}
+{"t": "2026-11-21 19:56:21", "kind": "ace_train_done", "scene": "chess", "variant": "sfm", "seed": 2, "density_tag": "full", "train_seconds": 434.9, "buffer": 8000000}
+{"t": "2026-11-21 20:05:51", "kind": "ace_train_done", "scene": "chess", "variant": "dslam", "seed": 0, "density_tag": "full", "train_seconds": 458.1, "buffer": 8000000}
+{"t": "2026-11-21 20:15:19", "kind": "ace_train_done", "scene": "chess", "variant": "dslam", "seed": 1, "density_tag": "full", "train_seconds": 448.4, "buffer": 8000000}
+{"t": "2026-11-21 20:24:31", "kind": "ace_train_done", "scene": "chess", "variant": "dslam", "seed": 2, "density_tag": "full", "train_seconds": 441.2, "buffer": 8000000}
+{"t": "2026-11-21 20:33:47", "kind": "ace_train_done", "scene": "stairs", "variant": "dslam", "seed": 0, "density_tag": "full", "train_seconds": 440.2, "buffer": 8000000}
+{"t": "2026-11-21 20:42:12", "kind": "ace_train_done", "scene": "stairs", "variant": "dslam", "seed": 1, "density_tag": "full", "train_seconds": 432.1, "buffer": 8000000}
+{"t": "2026-11-21 20:50:35", "kind": "ace_train_done", "scene": "stairs", "variant": "dslam", "seed": 2, "density_tag": "full", "train_seconds": 431.9, "buffer": 8000000}
+{"t": "2026-11-21 20:58:59", "kind": "ace_train_done", "scene": "stairs", "variant": "sfm", "seed": 0, "density_tag": "full", "train_seconds": 431.2, "buffer": 8000000}
+{"t": "2026-11-21 21:07:25", "kind": "ace_train_done", "scene": "stairs", "variant": "sfm", "seed": 1, "density_tag": "full", "train_seconds": 434.1, "buffer": 8000000}
+{"t": "2026-11-21 21:15:55", "kind": "ace_train_done", "scene": "stairs", "variant": "sfm", "seed": 2, "density_tag": "full", "train_seconds": 437.6, "buffer": 8000000}
+{"t": "2026-11-21 21:17:09", "kind": "check", "name": "ace_scoring_parity", "status": "PASS", "detail": "max |our - ACE logged| over 12 runs: translation 0.0333 cm, rotation 0.0021 deg (tolerances 0.1 cm / 0.05 deg)"}
+{"t": "2026-11-21 21:17:09", "kind": "check", "name": "ace_reproduction_sfm_chess", "status": "PASS", "detail": "chess/SfM mean accuracy 100.0 % vs published 100.0 % (tolerance 1 pp)"}
+{"t": "2026-11-21 21:17:09", "kind": "check", "name": "ace_reproduction_sfm_stairs", "status": "PASS", "detail": "stairs/SfM mean accuracy 81.6 % vs published 81.9 % (tolerance 3 pp)"}
+{"t": "2026-11-21 21:17:09", "kind": "check", "name": "ace_all_runs_complete", "status": "PASS", "detail": "12/12 runs finished (2 scenes x 2 ground truths x 3 seeds)"}
+{"t": "2026-11-21 21:17:13", "kind": "check", "name": "eval_no_frames_removed", "status": "PASS", "detail": "every method/seed table covers exactly the official test frames of its scene (no hard frame dropped)"}
+{"t": "2026-11-21 21:17:13", "kind": "check", "name": "eval_bins_and_oracle", "status": "PASS", "detail": "equal-count bins differ by at most one query=True; oracle error == d(q) on all frames=True; all methods use the identical d(q)=True"}
+{"t": "2026-11-21 21:17:29", "kind": "check", "name": "bootstrap_block_length_dev", "status": "PASS", "detail": "rule: ratio >= 0.85 -> length 50 NOT adequate on the development sequence, pre-declared fallback 100 used; chess/dslam: width(50)/max(width(100), width(200)) = 0.78; chess/sfm: width(50)/max(width(100), width(200)) = 0.78; stairs/dslam: width(50)/max(width(100), width(200)) = 0.79; stairs/sfm: width(50)/max(width(100), width(200)) = 0.85"}
+{"t": "2026-11-21 21:19:06", "kind": "check", "name": "statistics_bootstrap", "status": "PASS", "detail": "block bootstrap (length 100, 2000 resamples, paired across methods) completed for 4 scene/ground-truth combinations"}
+{"t": "2026-11-21 21:19:07", "kind": "check", "name": "density_maps_valid", "status": "PASS", "detail": "thinned maps are subsets of the training set, identical for both variants, disjoint from test, within 2 pp of the target share, every sequence kept: chess d50: 2000/4000 frames (50.0 %); chess d25: 1000/4000 frames (25.0 %); chess d10: 400/4000 frames (10.0 %); stairs d50: 1000/2000 frames (50.0 %); stairs d25: 500/2000 frames (25.0 %); stairs d10: 200/2000 frames (10.0 %)"}
+{"t": "2026-11-21 21:20:22", "kind": "check", "name": "density_netvlad", "status": "PASS", "detail": "NetVLAD top-1/top-k/oracle evaluated on every thinned map; k re-tuned on thinned development maps only"}
+{"t": "2026-11-21 21:20:49", "kind": "check", "name": "density_scene_folders", "status": "PASS", "detail": "thinned ACE folders hold exactly the thinned train frames (images = poses = calibration) and the unchanged test folder; ACE CamLocDataset reads the expected frame counts"}
+{"t": "2026-11-21 21:28:14", "kind": "ace_train_done", "scene": "chess", "variant": "dslam", "seed": 0, "density_tag": "d50", "train_seconds": 444.6, "buffer": 8000000}
+{"t": "2026-11-21 21:37:35", "kind": "ace_train_done", "scene": "chess", "variant": "dslam", "seed": 1, "density_tag": "d50", "train_seconds": 445.7, "buffer": 8000000}
+{"t": "2026-11-21 21:46:50", "kind": "ace_train_done", "scene": "chess", "variant": "dslam", "seed": 2, "density_tag": "d50", "train_seconds": 441.4, "buffer": 8000000}
+{"t": "2026-11-21 21:56:02", "kind": "ace_train_done", "scene": "chess", "variant": "sfm", "seed": 0, "density_tag": "d50", "train_seconds": 437.6, "buffer": 8000000}
+{"t": "2026-11-21 22:05:10", "kind": "ace_train_done", "scene": "chess", "variant": "sfm", "seed": 1, "density_tag": "d50", "train_seconds": 441.5, "buffer": 8000000}
+{"t": "2026-11-21 22:14:16", "kind": "ace_train_done", "scene": "chess", "variant": "sfm", "seed": 2, "density_tag": "d50", "train_seconds": 437.2, "buffer": 8000000}
+{"t": "2026-11-21 22:23:20", "kind": "ace_train_done", "scene": "stairs", "variant": "dslam", "seed": 0, "density_tag": "d50", "train_seconds": 435.7, "buffer": 8000000}
+{"t": "2026-11-21 22:31:42", "kind": "ace_train_done", "scene": "stairs", "variant": "dslam", "seed": 1, "density_tag": "d50", "train_seconds": 430.8, "buffer": 8000000}
+{"t": "2026-11-21 22:40:05", "kind": "ace_train_done", "scene": "stairs", "variant": "dslam", "seed": 2, "density_tag": "d50", "train_seconds": 430.7, "buffer": 8000000}
+{"t": "2026-11-21 22:48:28", "kind": "ace_train_done", "scene": "stairs", "variant": "sfm", "seed": 0, "density_tag": "d50", "train_seconds": 430.0, "buffer": 8000000}
+{"t": "2026-11-21 22:57:06", "kind": "ace_train_done", "scene": "stairs", "variant": "sfm", "seed": 1, "density_tag": "d50", "train_seconds": 446.1, "buffer": 8000000}
+{"t": "2026-11-21 23:05:36", "kind": "ace_train_done", "scene": "stairs", "variant": "sfm", "seed": 2, "density_tag": "d50", "train_seconds": 438.3, "buffer": 8000000}
+{"t": "2026-11-21 23:14:05", "kind": "ace_train_done", "scene": "chess", "variant": "dslam", "seed": 0, "density_tag": "d25", "train_seconds": 437.5, "buffer": 8000000}
+{"t": "2026-11-21 23:23:14", "kind": "ace_train_done", "scene": "chess", "variant": "sfm", "seed": 0, "density_tag": "d25", "train_seconds": 434.9, "buffer": 8000000}
+{"t": "2026-11-21 23:32:17", "kind": "ace_train_done", "scene": "stairs", "variant": "dslam", "seed": 0, "density_tag": "d25", "train_seconds": 435.4, "buffer": 8000000}
+{"t": "2026-11-21 23:40:45", "kind": "ace_train_done", "scene": "stairs", "variant": "sfm", "seed": 0, "density_tag": "d25", "train_seconds": 434.5, "buffer": 8000000}
+{"t": "2026-11-21 23:49:14", "kind": "ace_train_done", "scene": "chess", "variant": "dslam", "seed": 0, "density_tag": "d10", "train_seconds": 435.9, "buffer": 8000000}
+{"t": "2026-11-21 23:58:20", "kind": "ace_train_done", "scene": "chess", "variant": "sfm", "seed": 0, "density_tag": "d10", "train_seconds": 435.2, "buffer": 8000000}
+{"t": "2026-11-22 00:07:22", "kind": "ace_train_done", "scene": "stairs", "variant": "dslam", "seed": 0, "density_tag": "d10", "train_seconds": 434.4, "buffer": 8000000}
+{"t": "2026-11-22 00:15:50", "kind": "ace_train_done", "scene": "stairs", "variant": "sfm", "seed": 0, "density_tag": "d10", "train_seconds": 433.5, "buffer": 8000000}
+{"t": "2026-11-22 00:17:03", "kind": "check", "name": "density_ace_scoring_parity", "status": "PASS", "detail": "max |our - ACE logged| over 20 density runs: 0.0339 cm, 0.0022 deg"}
+{"t": "2026-11-22 00:17:03", "kind": "check", "name": "density_ace_all_runs_complete", "status": "PASS", "detail": "20/20 density runs finished"}
+{"t": "2026-11-22 00:17:12", "kind": "check", "name": "density_tables_and_H3", "status": "PASS", "detail": "192 density table rows; H3 computed for 4 scene/ground-truth combinations"}
+{"t": "2026-11-22 00:17:27", "kind": "check", "name": "figures_saved", "status": "PASS", "detail": "16 figure files (PNG and PDF) written to results/figures"}
+{"t": "2026-11-22 00:18:37", "kind": "check", "name": "failure_analysis", "status": "PASS", "detail": "120 worst frames listed (3 methods x 2 scenes x 20) with image montages"}
