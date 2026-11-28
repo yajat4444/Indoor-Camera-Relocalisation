@@ -7,7 +7,7 @@ UCS532 Open Challenge. Authors: Yajat Taneja (1024030082), Riddhima Agrawal (102
 
 **Reproduce.** `bash run_all.sh /path/to/folder_with_chess.zip_and_stairs.zip` (needs a CUDA GPU and internet). The notebook `P22_Indoor_Camera_Relocalisation.ipynb` is the single pipeline; seeds are printed in its logs. Dependencies: `requirements.txt`. Results go to `results/`.
 
-**Hardware / runtime.** Kaggle, NVIDIA T4 GPU, about 4-5 hours for the full run (all ACE trainings are cached and resumable).
+**Hardware / runtime.** Kaggle, NVIDIA T4 GPU, about 4-5 hours for the full run (all ACE trainings are cached and resumable). run_all.sh needs Linux and an NVIDIA CUDA GPU (ACE training). The full results were produced by running this notebook end to end on a Kaggle T4 GPU. On a laptop without CUDA, the data, pose, metric and NetVLAD-descriptor sections run, but the ACE stage cannot.
 
 ## Results (test sequences, full density; ACE = mean of 3 seeds)
 
@@ -37,5 +37,3 @@ ACE (Brachmann et al., CVPR 2023, https://github.com/nianticlabs/ace, pinned com
 
 ## Declarations
 Contribution: both authors worked jointly on all parts through shared meetings and discussion. AI declaration: Claude (Anthropic) was used to explain concepts, to help write and debug code, and to suggest the contents and layout of the report, slides and README. Both authors ran the experiments together and verified the results together, with AI assistance.
-
-Kaggle notebook and results in:- https://www.kaggle.com/code/yajat4444/notebook44f876b1db
